@@ -7,6 +7,7 @@ import cv2
 import wikipedia
 import webbrowser
 import pywhatkit
+import sys
 
 engine= pyttsx3.init('sapi5')
 voices= engine.getProperty('voices')
@@ -100,6 +101,12 @@ if __name__ == "__main__":
             speak("What should I play Sir")
             cm= takecommand().lower()
             pywhatkit.playonyt("f{cm}") 
+
+        elif "no thanks" in query:
+            speak("Have A Good Day Sir")
+            sys.exit()
+            
+        speak("Do you have any other work??")
 
 
         
